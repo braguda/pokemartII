@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeMart</title>
+    <link rel="icon" href="./assets/images/snorlax-icon.png">
+    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/modals.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="assets/js/cart.js" async></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-container">
+                <img src="assets/images/logo.jpg" alt="pokemart" class="pokemart-logo">
+            </div>
+            <nav class="nav-bar">
+                <a href="#top" class="nav-bar-link">Top</a>
+                <span class="nav-bar-link View-Cart">Cart</span>
+                <a href="#ball" class="nav-bar-link">PokeBalls</a>
+                <a href="#potion" class="nav-bar-link">Potions</a>
+                <a href="#revivers" class="nav-bar-link">Revives</a>
+                <a href="#incubs" class="nav-bar-link">Incubators</a>
+                <a href="#evolutions" class="nav-bar-link">Stones</a>
+                <a href="#foods" class="nav-bar-link">Berries</a>
+            </nav>
+        </header>
+        <div class="main-container">
+            <div class="welcome-div" id="top">
+                <div class="welcome-picture-holder">
+                    <img class="welcome-image" src="assets/images/pokemon-in-ball.jpg">
+                </div>
+                <div class="intro-div">
+                    <p>
+                        <h1>Welcome!</h1>
+                        <br>
+                        Welcome to PokeMart, your online mini mart for all your Poke-needs!
+                        <br>
+                        Thank you for stopping by!
+                        <br>
+                        Scroll below to see what we have today!
+                        <br>
+                        We offer a range of PokeBalls, healing items, berries, and more!
+                        <br>
+                        <h1>
+                            Enjoy!
+                        </h1> 
+                    </p>
+                </div>
+            </div>
+            <div class="items-div pokeballs" id="ball">
+                <div class="items-card" id="pokeballCard">
+                    <div class="items-desc">                    
+                        <img class="items-image" src="assets/images/pokeball.jpg" alt="pokeball-reg">
+                        <br>
+                        <span class="item-title">Pokeball</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Used to capture low level Pokemon
+                            <br>
+                            <span class="item-price">$9.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="greatballCard">
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/great-ball.jpg" alt="pokeball-great">
+                        <br>
+                        <span class="item-title">Great Ball</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Used to capture mid level Pokemon
+                            <br>
+                            <span class="item-price">$12.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="ultraballCard">
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/ultra-ball.jpg" alt="pokeball-ultra">
+                        <br>
+                        <span class="item-title">Ultra Ball</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Used to capture higher level Pokemon
+                            <br>
+                            <span class="item-price">$19.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-div potions" id="potion">
+                <div class="items-card" id="potionCard">
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/Potion.png" alt="potion">
+                        <br>
+                        <span class="item-title">Potion</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Used to restore 20 HP
+                            <br>
+                            <span class="item-price">$0.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="supPotionCard">
+
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/super-potion.png" alt="potion">
+                        <br>
+                        <span class="item-title">Super Potion</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Used to restore 50 HP
+                            <br>
+                            <span class="item-price">$1.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="hypPotionCard">
+
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/hyper-potion.png" alt="hyp-potion">
+                        <br>
+                        <span class="item-title">Hyper Potion</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Used to restore 200 HP
+                            <br>
+                            <span class="item-price">$6.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-div revives" id="revivers">
+                <div class="items-card" id="reviveCard">
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/revive.png" alt="revive">
+                        <br>
+                        <span class="item-title">Revive</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Revives fainted Pokemon and restores half of HP.
+                            <br>
+                            <span class="item-price">$5.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="maxReviveCard">
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/maxRevive.png" alt="max-revive">
+                        <br>
+                        <span class="item-title">Max Revive</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Revives fainted Pokemon and fully restores HP
+                            <br>
+                            <span class="item-price">$8.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-div incubators" id="incubs">
+                <div class="items-card" id="bluIncCard">
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/blue-incubator.png" alt="blu-inc">
+                        <br>
+                        <span class="item-title">Egg Incubator</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            A device that incubates an Egg as you walk until it is ready to hatch. Breaks after 3 uses
+                            <br>
+                            <span class="item-price">$24.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="supIncCard">
+
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/super-incubator.png" alt="super-inc">
+                        <br>
+                        <span class="item-title">Super Incubator</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            A more powerful Egg Incubator helps Eggs hatch quickly. Breaks after 3 uses
+                            <br>
+                            <span class="item-price">$34.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="infinIncCard">
+
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/eggIncubator.png" alt="infni-inc">
+                        <br>
+                        <span class="item-title">Infinte Incubator</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            A device that incubates an Egg as you walk until it is ready to hatch. Unlimited use
+                            <br>
+                            <span class="item-price">$64.99</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-div stones" id="evolutions">
+                <div class="items-card" id="moonStoneCard">
+
+                    <div class="items-desc">
+                        <img class="items-image evo" src="assets/images/moon-stone.jpg" alt="moon-stone">
+                        <br>
+                        <span class="item-title">Moon Store</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Evolution stone used on Normal Type Pokemon
+                            <br>
+                            <span class="item-price">$250</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="fireStoneCard">
+
+                    <div class="items-desc">
+                        <img class="items-image evo" src="assets/images/fire-stone.png" alt="fire-stone">
+                        <br>
+                        <span class="item-title">Fire Store</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Evolution stone used on Fire Type Pokemon
+                            <br>
+                            <span class="item-price">$250</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="leadStoneCard">
+
+                    <div class="items-desc">
+                        <img class="items-image evo" src="assets/images/leaf-stone.jpg" alt="leaf-stone">
+                        <br>
+                        <span class="item-title">Leaf Store</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Evolution stone used on Grass Type Pokemon
+                            <br>
+                            <span class="item-price">$250</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-div berries" id="foods">
+                <div class="items-card" id="razzCard">
+
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/razz-berry.png" alt="razz">
+                        <br>
+                        <span class="item-title">Razz Berry</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Feed this to a Pokemon, and it will be easier to catch on your next throw
+                            <br>
+                            <span class="item-price">$0.19</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="pinapCard">
+
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/pinap-berry.png" alt="pinap">
+                        <br>
+                        <span class="item-title">Pinap Berry</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Feed this to a Pokemon to make it drop more candy
+                            <br>
+                            <span class="item-price">$0.19</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="items-card" id="nanabCard">
+
+                    <div class="items-desc">
+                        <img class="items-image" src="assets/images/nanab-berry.png" alt="nanab">
+                        <br>
+                        <span class="item-title">Nanab Berry</span>
+                        <br>
+                        <br>
+                        <div class="item-detail">
+                            Feed this to a Pokemon to calm it down, making it less erratic
+                            <br>
+                            <span class="item-price">$0.49</span>
+                            <br>
+                            <button class="add-button" id="addBtn">Add to Cart</button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items-div footer">
+                <div class="logo-links-box">
+                    <img src="assets/images/logo.jpg" alt="pokemart" class="pokemart-logo">
+                    <div class="vertical-line"></div>
+                    <ul class="bottom-links">
+                        <li class="corp-link-about">
+                            <span class="about-open modal-open">About Us</span>
+                        </li>
+                        <li class="corp-link-contact">
+                            <span class="contact-open modal-open">Contact Us</span>
+                        </li>
+                    </ul>
+                    <ul class="bottom-links">
+                        <li>
+                            <span class="returns-open modal-open">Returns and Exchanges</span>
+                        </li>
+                        <li>
+                            <span class="shipping-open modal-open">Shipping Policy</span>
+                        </li>
+                    </ul>
+                    <ul class="bottom-links">
+                        <li>
+                            <a href="#">Back To Top</a>
+                        </li>
+                        <li>
+                            <span class="disclaimer-open modal-open">Disclaimer</span>
+                        </li>
+                    </ul>
+                    <ul class="bottom-links social-icon">
+                        <li>
+                            Built By:
+                            <br>
+                            Brian Aguda 
+                            <br>
+                            <br>
+                            <a href="https://github.com/braguda" target="_blank">
+                                <i class="fab fa-github fa-2x"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="cart-modal-container">
+            <div class="cart-modal">
+                <div class="modal-header">
+                    <span class="closer" id="closer">&times;</span>
+                    <h2>Your Cart</h2>
+                </div>
+                <div class="cart-items">
+
+                </div>
+                <br>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total: </strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+                <br>
+                <button class="btn-purchase" type="button">Purchase</button>
+            </div>
+        </div>
+        <div class="about-modal-container">
+            <div class="about-modal cart-modal">
+                <div class="modal-header">
+                    <span class="closer" id="closer">&times;</span>
+                    <h2>About Us</h2>
+                </div>
+                <div class="para-container">
+                    <p class="about-para">
+                        Hi! Thank you for stopping by!
+                        <br>
+                        <br>
+                        We're a plucky start up devoted to bringing you all your Pokemon needs. Here at Pokemart, we are passionate about finding the highest quality goods and ingredients to keep your Pokemon happy. 
+                        <br>
+                        <br>
+                        <u>The Pokemart Promise:</u>
+                        <br>
+                        We pride ourselves in sourcing locally grown, organic berries, and ethically mined pokeball and incubator parts. We make sure that our vendors align with those core values and are in no way affliated with Team Rocket or any other organizations that exploit pokemon for greed. We want you to be confident that your purchase does not go towards the exploitation of wild pokemon. 20% of all proceeds go towards the rehabilitation of wildlife and habitats impacted by activites of Team Rocket and their affiliates. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-modal-container">
+            <div class="contact-modal cart-modal">
+                <div class="modal-header">
+                    <span class="closer" id="closer">&times;</span>
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="para-container">
+                    <p class="about-para">
+                        <b>General Questions:</b>
+                        <br>
+                        <br>
+                        customer_support@pokemart.eu
+                        <br>
+                        <br>
+                        <b>Return Labels:</b>
+                        <br>
+                        <br>
+                        return_support@pokemart.eu 
+                        <br>
+                        <br>
+                        <b>Shipping and Tracking:</b>
+                        <br>
+                        <br>
+                        shipping_support@pokemart.eu
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="returns-modal-container">
+            <div class="returns-modal cart-modal">
+                <div class="modal-header">
+                    <span class="closer" id="closer">&times;</span>
+                    <h2>Returns and Exchanges</h2>
+                </div>
+                <div class="para-container">
+                    <p class="about-para">
+                        Not happy with your purchse? No problem! 
+                        <br>
+                        <br>
+                        Email us at <b>return_support@pokemart.eu</b> with a picture of the item, the reason for return, and a copy of your invoice and we'll send you a return label. Packaging is excluded. Berries and other food items are final sale. 
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="shipping-modal-container">
+            <div class="shipping-modal cart-modal">
+                <div class="modal-header">
+                    <span class="closer" id="closer">&times;</span>
+                    <h2>Shipping Policy</h2>
+                </div>
+                <div class="para-container">
+                    <p class="about-para">
+                        All oreders recieved by 9PM Pacific will be sent out the following business day. Please allow 5 to 10 business days for your order to arrive. If you have any questions, please shoot us an email at <b>shipping_support@pokemart.eu</b>
+                    </p>
+                </div>
+            </div>
+        </div> 
+        <div class="disclaimer-modal-container">
+            <div class="disclaimer-modal cart-modal">
+                <div class="modal-header">
+                    <span class="closer" id="closer">&times;</span>
+                    <h2>Disclaimer</h2>
+                </div>
+                <div class="para-container">
+                    <p class="about-para">
+                        I do not own Pokemon or any of the images featured on this page. <strong>This is not a real e-commerce site.</strong> I am not profiting from anything on here. I'm just a Junior Web Developer and this is purley for testing my programming skills and for fun.   
+                    </p>
+                </div>
+            </div>
+        </div>        
+    </div>  
+</body>
+<script type="text/javascript" src="assets/js/index.js"></script>
+</html>
